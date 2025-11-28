@@ -1,0 +1,15 @@
+# Node
+node_modules
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Build outputs
+dist
+.vite
+
+# Env
+.env
+.env.local
