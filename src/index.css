@@ -4,20 +4,173 @@
 
 :root {
   color-scheme: dark;
-  background-color: #0b1224;
+  --ink: 15 23 42;
+  --ink-soft: 30 41 59;
+  --ink-muted: 51 65 85;
+  --surface: 11 18 36;
+  --surface-100: 15 24 46;
+  --surface-200: 19 28 52;
+  --border-color: 255 255 255 / 0.08;
+  --accent: 34 211 238;
+  --accent2: 249 115 22;
+  --success: 34 197 94;
+  --warning: 250 204 21;
+  --danger: 239 68 68;
+  --neutral: 148 163 184;
+  --text: 226 232 240;
+  --glass: 255 255 255;
+  --glass-alpha: 0.04;
+  --glass-border: 0.08;
+  --bg-top: 11 18 36;
+  --bg-mid: 15 24 46;
+  --bg-bottom: 11 18 36;
+  --glow-1: 34 211 238;
+  --glow-2: 249 115 22;
+}
+
+[data-theme="midnight"] {
+  --ink: 15 23 42;
+  --ink-soft: 30 41 59;
+  --ink-muted: 51 65 85;
+  --surface: 11 18 36;
+  --surface-100: 15 24 46;
+  --surface-200: 19 28 52;
+  --border-color: 255 255 255 / 0.08;
+  --accent: 34 211 238;
+  --accent2: 249 115 22;
+  --success: 34 197 94;
+  --warning: 250 204 21;
+  --danger: 239 68 68;
+  --neutral: 148 163 184;
+  --text: 226 232 240;
+  --glass-alpha: 0.04;
+  --glass-border: 0.08;
+  --bg-top: 11 18 36;
+  --bg-mid: 15 24 46;
+  --bg-bottom: 11 18 36;
+  --glow-1: 34 211 238;
+  --glow-2: 249 115 22;
+}
+
+[data-theme="classic-dark"] {
+  color-scheme: dark;
+  --ink: 17 24 39;
+  --ink-soft: 30 41 59;
+  --ink-muted: 71 85 105;
+  --surface: 16 24 40;
+  --surface-100: 20 30 48;
+  --surface-200: 23 35 55;
+  --border-color: 255 255 255 / 0.08;
+  --accent: 59 130 246;
+  --accent2: 14 165 233;
+  --success: 34 197 94;
+  --warning: 250 204 21;
+  --danger: 239 68 68;
+  --neutral: 148 163 184;
+  --text: 226 232 240;
+  --glass-alpha: 0.05;
+  --glass-border: 0.08;
+  --bg-top: 16 24 40;
+  --bg-mid: 23 35 55;
+  --bg-bottom: 16 24 40;
+  --glow-1: 59 130 246;
+  --glow-2: 14 165 233;
+}
+
+[data-theme="classic"] {
+  color-scheme: light;
+  --ink: 17 24 39;
+  --ink-soft: 30 41 59;
+  --ink-muted: 71 85 105;
+  --surface: 238 242 248;
+  --surface-100: 230 236 244;
+  --surface-200: 219 227 240;
+  --border-color: 15 23 42 / 0.08;
+  --accent: 59 130 246;
+  --accent2: 16 185 129;
+  --success: 34 197 94;
+  --warning: 234 179 8;
+  --danger: 239 68 68;
+  --neutral: 100 116 139;
+  --text: 17 24 39;
+  --glass: 255 255 255;
+  --glass-alpha: 0.7;
+  --glass-border: 0.1;
+  --bg-top: 238 242 248;
+  --bg-mid: 225 231 242;
+  --bg-bottom: 238 242 248;
+  --glow-1: 59 130 246;
+  --glow-2: 16 185 129;
+}
+
+[data-theme="sunrise"] {
+  --ink: 28 10 32;
+  --ink-soft: 42 13 46;
+  --ink-muted: 73 26 65;
+  --surface: 20 8 28;
+  --surface-100: 30 12 40;
+  --surface-200: 41 16 52;
+  --border-color: 255 238 215 / 0.1;
+  --accent: 251 146 60;
+  --accent2: 236 72 153;
+  --success: 132 204 22;
+  --warning: 251 191 36;
+  --danger: 248 113 113;
+  --neutral: 241 214 255;
+  --glass-alpha: 0.05;
+  --glass-border: 0.1;
+  --bg-top: 30 12 40;
+  --bg-mid: 48 17 60;
+  --bg-bottom: 20 8 28;
+  --glow-1: 236 72 153;
+  --glow-2: 251 146 60;
+}
+
+[data-theme="aurora"] {
+  --ink: 8 17 36;
+  --ink-soft: 17 24 52;
+  --ink-muted: 34 48 84;
+  --surface: 6 14 32;
+  --surface-100: 8 22 44;
+  --surface-200: 12 32 58;
+  --border-color: 209 250 229 / 0.12;
+  --accent: 16 185 129;
+  --accent2: 139 92 246;
+  --success: 45 212 191;
+  --warning: 190 242 100;
+  --danger: 248 113 113;
+  --neutral: 191 219 254;
+  --glass-alpha: 0.05;
+  --glass-border: 0.12;
+  --bg-top: 8 22 44;
+  --bg-mid: 16 32 66;
+  --bg-bottom: 6 14 32;
+  --glow-1: 16 185 129;
+  --glow-2: 139 92 246;
 }
 
 body {
   @apply min-h-screen bg-surface text-slate-100 font-body;
-  background-image: radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.08), transparent 30%),
-    radial-gradient(circle at 80% 0%, rgba(249, 115, 22, 0.08), transparent 25%),
-    linear-gradient(180deg, #0b1224 0%, #0f182e 50%, #0b1224 100%);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgb(var(--glow-1) / 0.08), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgb(var(--glow-2) / 0.08), transparent 25%),
+    linear-gradient(180deg, rgb(var(--bg-top)) 0%, rgb(var(--bg-mid)) 50%, rgb(var(--bg-bottom)) 100%);
+  color: rgb(var(--text));
 }
 
 .glass {
-  background: var(--glass, rgba(255, 255, 255, 0.04));
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgb(var(--glass, 255 255 255) / var(--glass-alpha, 0.04));
+  border: 1px solid rgb(var(--glass, 255 255 255) / var(--glass-border, 0.08));
   backdrop-filter: blur(10px);
+}
+
+[data-theme="classic"] .text-slate-100,
+[data-theme="classic"] .text-white {
+  color: rgb(var(--text)) !important;
+}
+
+[data-theme="classic"] .bg-white\/5 {
+  background-color: rgb(var(--ink) / 0.04) !important;
 }
 
 .grain {

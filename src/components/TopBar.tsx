@@ -2,8 +2,15 @@ import { Bell, Circle, Command, Search } from "lucide-react";
 import { Badge } from "./Badge";
 import { Avatar } from "./Avatar";
 import { Button } from "./Button";
+import { ColorSchemePicker } from "./ColorSchemePicker";
+import type { ThemeId } from "../theme";
 
-export function TopBar() {
+interface TopBarProps {
+  theme: ThemeId;
+  onThemeChange: (theme: ThemeId) => void;
+}
+
+export function TopBar({ theme, onThemeChange }: TopBarProps) {
   return (
     <header className="sticky top-0 z-20 mb-6 flex items-center justify-between rounded-3xl border border-border bg-surface-100/80 px-5 py-3 backdrop-blur">
       <div className="flex items-center gap-3">
@@ -42,6 +49,7 @@ export function TopBar() {
             <p className="text-xs text-neutral">Lead • Miami</p>
           </div>
         </div>
+        <ColorSchemePicker value={theme} onChange={onThemeChange} />
       </div>
     </header>
   );
