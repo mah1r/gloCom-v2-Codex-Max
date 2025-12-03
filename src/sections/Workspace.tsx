@@ -143,12 +143,12 @@ function RightColumn() {
 
 function Row({ icon, label, value }: { icon: React.ReactNode; label: string; value: React.ReactNode }) {
   return (
-    <div className="flex items-center justify-between rounded-2xl border border-border bg-white/5 px-3 py-2">
+    <div className="flex items-center justify-between gap-3 rounded-2xl border border-border bg-white/5 px-3 py-2">
       <span className="flex items-center gap-2 text-neutral">
         {icon}
         {label}
       </span>
-      <span className="text-slate-100">{value}</span>
+      <span className="truncate text-slate-100">{value}</span>
     </div>
   );
 }

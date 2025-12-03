@@ -19,7 +19,7 @@ interface SideNavProps {
 
 export function SideNav({ active, onChange }: SideNavProps) {
   return (
-    <aside className="grain glass fixed left-0 top-0 flex h-screen w-[82px] flex-col justify-between border-r border-border px-2 py-4">
+    <aside className="grain glass fixed left-0 top-0 z-50 flex h-screen w-[82px] flex-col justify-between border-r border-border px-2 py-4">
       <div className="flex flex-col gap-2">
         <div className="glass mx-2 mb-3 rounded-2xl px-3 py-2 text-center text-xs font-semibold text-white">
           glo
@@ -37,7 +37,7 @@ export function SideNav({ active, onChange }: SideNavProps) {
               )}
             >
               <Icon className="h-5 w-5" />
-              <span className="pointer-events-none absolute left-[80px] z-20 origin-left scale-0 rounded-full bg-ink-soft px-3 py-1 text-xs text-white shadow-soft transition-all group-hover:scale-100">
+              <span className="pointer-events-none absolute left-[88px] z-50 origin-left scale-0 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-ink shadow-soft ring-1 ring-border/60 transition-all group-hover:scale-100">
                 {item.label}
               </span>
               {isActive && <span className="absolute right-2 h-1.5 w-1.5 rounded-full bg-accent" />}
@@ -47,7 +47,7 @@ export function SideNav({ active, onChange }: SideNavProps) {
       </div>
       <button className="group flex h-12 items-center justify-center rounded-2xl text-slate-300 transition-all hover:bg-white/5">
         <Settings className="h-5 w-5" />
-        <span className="pointer-events-none absolute left-[80px] z-20 origin-left scale-0 rounded-full bg-ink-soft px-3 py-1 text-xs text-white shadow-soft transition-all group-hover:scale-100">
+        <span className="pointer-events-none absolute left-[88px] z-50 origin-left scale-0 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-ink shadow-soft ring-1 ring-border/60 transition-all group-hover:scale-100">
           Settings
         </span>
       </button>

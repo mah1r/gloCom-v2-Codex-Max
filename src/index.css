@@ -82,10 +82,10 @@
   --ink: 17 24 39;
   --ink-soft: 30 41 59;
   --ink-muted: 71 85 105;
-  --surface: 238 242 248;
-  --surface-100: 230 236 244;
-  --surface-200: 219 227 240;
-  --border-color: 15 23 42 / 0.08;
+  --surface: 230 234 242;
+  --surface-100: 222 228 238;
+  --surface-200: 213 220 232;
+  --border-color: 15 23 42 / 0.1;
   --accent: 59 130 246;
   --accent2: 16 185 129;
   --success: 34 197 94;
@@ -94,11 +94,11 @@
   --neutral: 100 116 139;
   --text: 17 24 39;
   --glass: 255 255 255;
-  --glass-alpha: 0.7;
-  --glass-border: 0.1;
-  --bg-top: 238 242 248;
-  --bg-mid: 225 231 242;
-  --bg-bottom: 238 242 248;
+  --glass-alpha: 0.8;
+  --glass-border: 0.12;
+  --bg-top: 230 234 242;
+  --bg-mid: 219 226 238;
+  --bg-bottom: 230 234 242;
   --glow-1: 59 130 246;
   --glow-2: 16 185 129;
 }
@@ -171,6 +171,14 @@ body {
 
 [data-theme="classic"] .bg-white\/5 {
   background-color: rgb(var(--ink) / 0.04) !important;
+}
+
+[data-theme="classic"] .border-border {
+  border-color: rgb(15 23 42 / 0.12) !important;
+}
+
+[data-theme="classic"] .shadow-soft {
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.12) !important;
 }
 
 .grain {
